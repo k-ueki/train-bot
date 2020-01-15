@@ -2,13 +2,11 @@ version: "3.3"
 
 services:
     server:
-        build:
-            dockerfile: Dockerfile
+        build: .
         tty: true
         stdin_open: true
-        priviledged: true
+        privileged: true
         container_name: server
-        working_dir: /home/uekikatsuya/
+        working_dir: /train-bot
         environment: 
             - GO!!!MODULE=on
-        

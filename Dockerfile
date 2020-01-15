@@ -1,6 +1,8 @@
 FROM golang:latest
 
-WORKDIR ~/train-bot/
+WORKDIR /train-bot
+
+COPY ./ /train-bot
 
 RUN go build
 
