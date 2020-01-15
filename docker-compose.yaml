@@ -1,0 +1,26 @@
+version: "3.3"
+
+services:
+    server:
+        build:
+            context: 
+        tty: true
+        stdin_open: true
+        priviledged: true
+        container_name: server
+        working_dir: /home/uekikatsuya/
+        environment: 
+            - GO!!!MODULE=on
+        
+    # front:
+    #     build:
+    #         context: ./docker/front
+    #         dockerfile: Dockerfile
+    #     tty: true
+    #     stdin_open: true
+    #     priviledged: true
+    #     container_name: front
+    #     working_dir: /home/uekikatsuya/
+    #     volumes:
+    #         - ./:/app
+    #     command: yarn run serve --port 8080
