@@ -1,9 +1,11 @@
 FROM golang:latest
 
-WORKDIR /train-bot
+WORKDIR /go/src/github.com/k-ueki/train-bot
 
-COPY ./ /train-bot
+COPY ./ /go/src/github.com/k-ueki/train-bot
 
 RUN go build
+
+EXPOSE 8888
 
 CMD ["go", "run","main.go"]
